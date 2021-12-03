@@ -35,7 +35,7 @@ const triggerFunction = async (req, res) => {
       }, delayTime);
     }
 
-    res.status.send({ status: success, msg: "event loop stopped" });
+    res.status(201).send({ status: "success", msg: "event initiated" });
 
   } catch (err) {
     res.status(500).send({ status: "failure", err: err.message });
