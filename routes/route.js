@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const audioController = require("../controller/audioController");
+const timeController = require("../controller/timeController");
 
-router.post("/playAudio", audioController.playAudio);
-router.get("/getAudio/:trackID", audioController.getAudio);
+router.post("/scheduler", timeController.triggerFunction)
 
-module.exports =  router ;
+module.exports = router;
+
