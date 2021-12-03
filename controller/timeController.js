@@ -20,11 +20,14 @@ const triggerFunction = async (req, res) => {
         "Y-M-D H:m:s"
       );
 
+      // make sure the date is not from the past
+      if(givenDate < moment().format("Y-M-D H:m:s")){
+        return res.status(400).send({status:false, msg:"enter the valid date not the past date"})
+      }
+
       // how to get the delay between current time and inputted time
       const date = new Date(givenDate);
       const currentDate = new Date();
-      console.log(date);
-      console.log(currentDate);
       let diff = date - currentDate;
       let delayTime = diff + eventArray[i].text.length * 1000;
 

@@ -1,0 +1,4 @@
+ the problems faced was how to initiate the function at a future time but that problem was solved by calculating the time difference between now and
+ that future date using moment and then adding the delay from the text as well apart from that it was a stright-forward problem which i enjoyed doing.
+
+i have also used moment as i mentioned extensively to handle the dates and setTimeout function to handle the delay.
